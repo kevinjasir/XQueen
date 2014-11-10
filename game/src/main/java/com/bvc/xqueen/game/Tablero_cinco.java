@@ -75,7 +75,7 @@ public class Tablero_cinco extends Activity {
         c55=(CheckBox)findViewById(R.id.c55);
 
         //Le asignamos colores a los background del checkbox
-        mostrarColores();
+        mostrarColores(10,10,10,10);
 
 
         //TextView txt=(TextView)findViewById(R.id.textTest);
@@ -83,7 +83,7 @@ public class Tablero_cinco extends Activity {
 
     }
 
-    public void mostrarColores(){
+    public void mostrarColores(int izq, int arriba,int der, int abajo){
         c11.setBackgroundResource(R.drawable.negro);
         c12.setBackgroundResource(R.drawable.rojo);
         c13.setBackgroundResource(R.drawable.negro);
@@ -114,6 +114,35 @@ public class Tablero_cinco extends Activity {
         c54.setBackgroundResource(R.drawable.rojo);
         c55.setBackgroundResource(R.drawable.negro);
 
+        c11.setPadding(izq,arriba,der,abajo);
+        c12.setPadding(izq,arriba,der,abajo);
+        c13.setPadding(izq,arriba,der,abajo);
+        c14.setPadding(izq,arriba,der,abajo);
+        c15.setPadding(izq,arriba,der,abajo);
+
+        c21.setPadding(izq,arriba,der,abajo);
+        c22.setPadding(izq,arriba,der,abajo);
+        c23.setPadding(izq,arriba,der,abajo);
+        c24.setPadding(izq,arriba,der,abajo);
+        c25.setPadding(izq,arriba,der,abajo);
+
+        c31.setPadding(izq,arriba,der,abajo);
+        c32.setPadding(izq,arriba,der,abajo);
+        c33.setPadding(izq,arriba,der,abajo);
+        c34.setPadding(izq,arriba,der,abajo);
+        c35.setPadding(izq,arriba,der,abajo);
+
+        c41.setPadding(izq,arriba,der,abajo);
+        c42.setPadding(izq,arriba,der,abajo);
+        c43.setPadding(izq,arriba,der,abajo);
+        c44.setPadding(izq,arriba,der,abajo);
+        c45.setPadding(izq,arriba,der,abajo);
+
+        c51.setPadding(izq,arriba,der,abajo);
+        c52.setPadding(izq,arriba,der,abajo);
+        c53.setPadding(izq,arriba,der,abajo);
+        c54.setPadding(izq,arriba,der,abajo);
+        c55.setPadding(izq,arriba,der,abajo);
 
     }
 }
