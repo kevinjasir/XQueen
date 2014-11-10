@@ -42,6 +42,12 @@ public class MainActivity extends ActionBarActivity {
                 //textInicio.setText("hola");
                 if(rb4.isChecked()){
                     textInicio.setText("Seleccione el 4");
+                    Intent intent = new Intent("com.bvc.xqueen.game.TABLERO_CUATRO");
+                    //Bundle misDatos= new Bundle();
+                    //misDatos.putString("NombreUsuario", nombreUsuario);
+                    //misDatos.putString("CampoRegion", camposRegion);
+                    //intent.putExtras(misDatos);
+                    startActivity(intent);
                 }else if(rb5.isChecked()){
                     textInicio.setText("Seleccione el 5");
                 }else if(rb7.isChecked()){
