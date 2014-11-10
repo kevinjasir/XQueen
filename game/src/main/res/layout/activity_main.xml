@@ -6,7 +6,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.bvc.xqueen.game.MainActivity">
+    tools:context="com.bvc.xqueen.game.MainActivity"
+    android:background="@drawable/fondo"
+    >
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +17,8 @@
         android:id="@+id/textInicio"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="22dp" />
+        android:textSize="22dp"
+        android:textColor="@android:color/white"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -29,25 +32,29 @@
             android:layout_height="wrap_content"
             android:text="Fácil"
             android:id="@+id/radioB4"
-            android:checked="true" />
+            android:checked="true"
+            android:textColor="@android:color/white"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Medio"
-            android:id="@+id/radioB5" />
+            android:id="@+id/radioB5"
+            android:textColor="@android:color/white"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dificil"
-            android:id="@+id/radioB7" />
+            android:id="@+id/radioB7"
+            android:textColor="@android:color/white"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Muy Dificil"
-            android:id="@+id/radioB8" />
+            android:id="@+id/radioB8"
+            android:textColor="@android:color/white"/>
     </RadioGroup>
 
     <Button
@@ -56,5 +63,6 @@
         android:text="Comenzar"
         android:id="@+id/btnComenzar"
         android:layout_below="@+id/radioGroup"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"/>
 </RelativeLayout>
