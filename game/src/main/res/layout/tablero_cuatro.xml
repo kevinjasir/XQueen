@@ -4,13 +4,21 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fondo3">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="4 Reinas"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Seleccione 4 posiciones en el tablero."
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/white"/>
@@ -25,28 +33,29 @@
             android:layout_height="fill_parent">
 
             <CheckBox
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c11" />
+                android:id="@+id/cc11" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c12" />
+                android:id="@+id/cc12" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c13" />
+                android:id="@+id/cc13" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c14" />
+                android:id="@+id/cc14" />
         </TableRow>
         <TableRow
             android:layout_width="fill_parent"
@@ -56,25 +65,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c21" />
+                android:id="@+id/cc21" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c22" />
+                android:id="@+id/cc22" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c23" />
+                android:id="@+id/cc23" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c24" />
+                android:id="@+id/cc24" />
         </TableRow>
         <TableRow
             android:layout_width="fill_parent"
@@ -84,25 +93,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c31" />
+                android:id="@+id/cc31" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c32" />
+                android:id="@+id/cc32" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c33" />
+                android:id="@+id/cc33" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c34" />
+                android:id="@+id/cc34" />
         </TableRow>
         <TableRow
             android:layout_width="fill_parent"
@@ -112,25 +121,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c41" />
+                android:id="@+id/cc41" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c42" />
+                android:id="@+id/cc42" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c43" />
+                android:id="@+id/cc43" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/c44" />
+                android:id="@+id/cc44" />
         </TableRow>
 
     </TableLayout>
@@ -139,7 +148,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Comprobar"
-        android:id="@+id/btnComprobar1"
+        android:id="@+id/btnComp1"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/white"/>
 
