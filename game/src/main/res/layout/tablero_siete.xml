@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="7 Reinas"
-        android:id="@+id/textView"
+        android:id="@+id/textTitulo1"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/white"/>
     <TextView
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Seleccione 7 posiciones en el tablero."
-        android:id="@+id/textView"
+        android:id="@+id/textTitulo2"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/white"/>
 

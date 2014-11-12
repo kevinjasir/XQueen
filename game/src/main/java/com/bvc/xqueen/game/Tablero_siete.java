@@ -216,14 +216,13 @@ public class Tablero_siete extends Activity {
                     String [] sol = new  String[N];
                     for (int j = 0; j<aux.length;j++){
                         sol[j] = ""+((j+1)+","+(aux[j]+1));
-                        //System.out.println("sol "+j+":"+""+((j+1)+","+(aux[j]+1)));
                     }
                     //System.out.println(i+"-"+Arrays.toString(sol));
-                    //lista_reinas.add(i,sol);
+
                     lista_reinas.add(sol);
 
                 }
-                
+                /*
                 System.out.println("======================================");
                 System.out.println("listaLocal: "+lista);
                 for(int i=0;i<soluciones.size();i++)
@@ -284,21 +283,32 @@ public class Tablero_siete extends Activity {
 
                     }
                 }
-                if(ganaste){textTest.setText("Ganaste");}else{textTest.setText("L");}
 
+
+                TextView titulo1 = (TextView)findViewById(R.id.textTitulo1);
+                TextView titulo2 = (TextView)findViewById(R.id.textTitulo2);
+
+                if(ganaste){
+                    textTest.setText("Ganaste");
+                    titulo1.setText("Felicidades Ganaste!!!");
+                    titulo2.setText("nivel dificl superado!!");
+
+                    //************************************************************************
+                    //hacer una alerta para ver si quiere seguir jugando o pasar al otro nivel
+                }
+                else{
+                    textTest.setText("L");
+                    limpiarCheckbox7x7();
+                }
             }
         });
 
-
-        mostrarColores();
-
-
-        //TextView txt=(TextView)findViewById(R.id.textTest);
-        //txt.setText("hoa llegamos bien");
-
+        //mostrar tablero y pading
+        mostrarColores(5,5,5,5);
     }
 
-    public void mostrarColores(){
+    private void mostrarColores(int izq,int arriba,int der,int abajo){
+
         c11.setBackgroundResource(R.drawable.negro);
         c12.setBackgroundResource(R.drawable.rojo);
         c13.setBackgroundResource(R.drawable.negro);
@@ -355,6 +365,122 @@ public class Tablero_siete extends Activity {
         c76.setBackgroundResource(R.drawable.rojo);
         c77.setBackgroundResource(R.drawable.negro);
 
+        //pading
+
+        c11.setPadding(izq,arriba,der,abajo);
+        c12.setPadding(izq,arriba,der,abajo);
+        c13.setPadding(izq,arriba,der,abajo);
+        c14.setPadding(izq,arriba,der,abajo);
+        c15.setPadding(izq,arriba,der,abajo);
+        c16.setPadding(izq,arriba,der,abajo);
+        c17.setPadding(izq,arriba,der,abajo);
+
+        c21.setPadding(izq,arriba,der,abajo);
+        c22.setPadding(izq,arriba,der,abajo);
+        c23.setPadding(izq,arriba,der,abajo);
+        c24.setPadding(izq,arriba,der,abajo);
+        c25.setPadding(izq,arriba,der,abajo);
+        c26.setPadding(izq,arriba,der,abajo);
+        c27.setPadding(izq,arriba,der,abajo);
+
+        c31.setPadding(izq,arriba,der,abajo);
+        c32.setPadding(izq,arriba,der,abajo);
+        c33.setPadding(izq,arriba,der,abajo);
+        c34.setPadding(izq,arriba,der,abajo);
+        c35.setPadding(izq,arriba,der,abajo);
+        c36.setPadding(izq,arriba,der,abajo);
+        c37.setPadding(izq,arriba,der,abajo);
+
+        c41.setPadding(izq,arriba,der,abajo);
+        c42.setPadding(izq,arriba,der,abajo);
+        c43.setPadding(izq,arriba,der,abajo);
+        c44.setPadding(izq,arriba,der,abajo);
+        c45.setPadding(izq,arriba,der,abajo);
+        c46.setPadding(izq,arriba,der,abajo);
+        c47.setPadding(izq,arriba,der,abajo);
+
+        c51.setPadding(izq,arriba,der,abajo);
+        c52.setPadding(izq,arriba,der,abajo);
+        c53.setPadding(izq,arriba,der,abajo);
+        c54.setPadding(izq,arriba,der,abajo);
+        c55.setPadding(izq,arriba,der,abajo);
+        c56.setPadding(izq,arriba,der,abajo);
+        c57.setPadding(izq,arriba,der,abajo);
+
+        c61.setPadding(izq,arriba,der,abajo);
+        c62.setPadding(izq,arriba,der,abajo);
+        c63.setPadding(izq,arriba,der,abajo);
+        c64.setPadding(izq,arriba,der,abajo);
+        c65.setPadding(izq,arriba,der,abajo);
+        c66.setPadding(izq,arriba,der,abajo);
+        c67.setPadding(izq,arriba,der,abajo);
+
+        c71.setPadding(izq,arriba,der,abajo);
+        c72.setPadding(izq,arriba,der,abajo);
+        c73.setPadding(izq,arriba,der,abajo);
+        c74.setPadding(izq,arriba,der,abajo);
+        c75.setPadding(izq,arriba,der,abajo);
+        c76.setPadding(izq,arriba,der,abajo);
+        c77.setPadding(izq,arriba,der,abajo);
+
     }
+    private void limpiarCheckbox7x7(){
+        c11.setChecked(false);
+        c12.setChecked(false);
+        c13.setChecked(false);
+        c14.setChecked(false);
+        c15.setChecked(false);
+        c16.setChecked(false);
+        c17.setChecked(false);
+
+        c21.setChecked(false);
+        c22.setChecked(false);
+        c23.setChecked(false);
+        c24.setChecked(false);
+        c25.setChecked(false);
+        c26.setChecked(false);
+        c27.setChecked(false);
+
+        c31.setChecked(false);
+        c32.setChecked(false);
+        c33.setChecked(false);
+        c34.setChecked(false);
+        c35.setChecked(false);
+        c36.setChecked(false);
+        c37.setChecked(false);
+
+        c41.setChecked(false);
+        c42.setChecked(false);
+        c43.setChecked(false);
+        c44.setChecked(false);
+        c45.setChecked(false);
+        c46.setChecked(false);
+        c47.setChecked(false);
+
+        c51.setChecked(false);
+        c52.setChecked(false);
+        c53.setChecked(false);
+        c54.setChecked(false);
+        c55.setChecked(false);
+        c56.setChecked(false);
+        c57.setChecked(false);
+
+        c61.setChecked(false);
+        c62.setChecked(false);
+        c63.setChecked(false);
+        c64.setChecked(false);
+        c65.setChecked(false);
+        c66.setChecked(false);
+        c67.setChecked(false);
+
+        c71.setChecked(false);
+        c72.setChecked(false);
+        c73.setChecked(false);
+        c74.setChecked(false);
+        c75.setChecked(false);
+        c76.setChecked(false);
+        c77.setChecked(false);
+    }
+
 }
 

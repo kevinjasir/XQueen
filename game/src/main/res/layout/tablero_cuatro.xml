@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="4 Reinas"
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/white"/>
     <TextView
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Seleccione 4 posiciones en el tablero."
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_gravity="center_horizontal"
         android:textColor="@android:color/white"/>
 

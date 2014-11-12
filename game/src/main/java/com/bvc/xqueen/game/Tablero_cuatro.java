@@ -142,10 +142,24 @@ public class Tablero_cuatro extends Activity {
                         break;
                     }else{
                         ganaste=false;
-
-                    }
+                       }
                 }
-                if(ganaste){textTest.setText("Ganaste");}else{textTest.setText("L");}
+                TextView titulo1 = (TextView)findViewById(R.id.textView1);
+                TextView titulo2 = (TextView)findViewById(R.id.textView2);
+
+                if(ganaste){
+                    textTest.setText("Ganaste!!");
+                    titulo1.setText("Felicidades Ganaste!!!");
+                    titulo2.setText("nivel fácil superado!!");
+
+                    //************************************************************************
+                    //hacer una alerta para ver si quiere seguir jugando o pasar al otro nivel
+
+                }
+                else{
+                    textTest.setText("L");
+                    limpiarCheckbox4x4();
+                }
 
             }
         });
@@ -199,6 +213,32 @@ public class Tablero_cuatro extends Activity {
        cc42.setPadding(izq,arriba,der,abajo);
        cc43.setPadding(izq,arriba,der,abajo);
        cc44.setPadding(izq,arriba,der,abajo);
+
+    }
+
+    private void limpiarCheckbox4x4(){
+       cc11.setChecked(false);
+       cc12.setChecked(false);
+       cc13.setChecked(false);
+       cc14.setChecked(false);
+
+
+       cc21.setChecked(false);
+       cc22.setChecked(false);
+       cc23.setChecked(false);
+       cc24.setChecked(false);
+
+
+       cc31.setChecked(false);
+       cc32.setChecked(false);
+       cc33.setChecked(false);
+       cc34.setChecked(false);
+
+
+       cc41.setChecked(false);
+       cc42.setChecked(false);
+       cc43.setChecked(false);
+       cc44.setChecked(false);
 
     }
 }

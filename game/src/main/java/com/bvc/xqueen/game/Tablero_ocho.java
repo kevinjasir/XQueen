@@ -379,7 +379,23 @@ public class Tablero_ocho extends Activity {
 
                     }
                 }
-                if(ganaste){textTest.setText("Ganaste");}else{textTest.setText("L");}
+
+                TextView titulo1 = (TextView)findViewById(R.id.textView1);
+                TextView titulo2 = (TextView)findViewById(R.id.textView2);
+
+                if(ganaste){
+                    textTest.setText("Ganaste!!");
+                    titulo1.setText("Felicidades Ganaste!!!");
+                    titulo2.setText("nivel muy dificil superado!!");
+
+                    //************************************************************************
+                    //hacer una alerta para ver si quiere seguir jugando o pasar al otro nivel
+
+                }
+                else{
+                    textTest.setText("L");
+                    limpiarCheckbox8x8();
+                }
 
             }
         });
@@ -466,5 +482,80 @@ public class Tablero_ocho extends Activity {
         c87.setBackgroundResource(R.drawable.rojo);
         c88.setBackgroundResource(R.drawable.negro);
     }
+
+    private void limpiarCheckbox8x8(){
+        c11.setChecked(false);
+        c12.setChecked(false);
+        c13.setChecked(false);
+        c14.setChecked(false);
+        c15.setChecked(false);
+        c16.setChecked(false);
+        c17.setChecked(false);
+        c18.setChecked(false);
+
+        c21.setChecked(false);
+        c22.setChecked(false);
+        c23.setChecked(false);
+        c24.setChecked(false);
+        c25.setChecked(false);
+        c26.setChecked(false);
+        c27.setChecked(false);
+        c28.setChecked(false);
+
+        c31.setChecked(false);
+        c32.setChecked(false);
+        c33.setChecked(false);
+        c34.setChecked(false);
+        c35.setChecked(false);
+        c36.setChecked(false);
+        c37.setChecked(false);
+        c38.setChecked(false);
+
+        c41.setChecked(false);
+        c42.setChecked(false);
+        c43.setChecked(false);
+        c44.setChecked(false);
+        c45.setChecked(false);
+        c46.setChecked(false);
+        c47.setChecked(false);
+        c48.setChecked(false);
+
+        c51.setChecked(false);
+        c52.setChecked(false);
+        c53.setChecked(false);
+        c54.setChecked(false);
+        c55.setChecked(false);
+        c56.setChecked(false);
+        c57.setChecked(false);
+        c58.setChecked(false);
+
+        c61.setChecked(false);
+        c62.setChecked(false);
+        c63.setChecked(false);
+        c64.setChecked(false);
+        c65.setChecked(false);
+        c66.setChecked(false);
+        c67.setChecked(false);
+        c68.setChecked(false);
+
+        c71.setChecked(false);
+        c72.setChecked(false);
+        c73.setChecked(false);
+        c74.setChecked(false);
+        c75.setChecked(false);
+        c76.setChecked(false);
+        c77.setChecked(false);
+        c78.setChecked(false);
+
+        c81.setChecked(false);
+        c82.setChecked(false);
+        c83.setChecked(false);
+        c84.setChecked(false);
+        c85.setChecked(false);
+        c86.setChecked(false);
+        c87.setChecked(false);
+        c88.setChecked(false);
+    }
+
 }
 
