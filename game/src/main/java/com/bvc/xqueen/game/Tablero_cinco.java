@@ -75,7 +75,7 @@ public class Tablero_cinco extends Activity {
         c55=(CheckBox)findViewById(R.id.c55);
 
         //Le asignamos colores a los background del checkbox
-        mostrarColores(10,10,10,10);
+        mostrarColores(13,10,13,10);
 
 
         //TextView txt=(TextView)findViewById(R.id.textTest);

@@ -2,9 +2,10 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/fondo3">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo3"
+    android:weightSum="1">
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,15 +30,14 @@
         android:layout_gravity="center_horizontal">
 
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <CheckBox
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:id="@+id/cc11" />
+                android:id="@+id/cc11"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -58,8 +58,8 @@
                 android:id="@+id/cc14" />
         </TableRow>
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -68,7 +68,7 @@
                 android:id="@+id/cc21" />
 
             <CheckBox
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:id="@+id/cc22" />
@@ -86,8 +86,8 @@
                 android:id="@+id/cc24" />
         </TableRow>
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -114,8 +114,8 @@
                 android:id="@+id/cc34" />
         </TableRow>
         <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -144,20 +144,28 @@
 
     </TableLayout>
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Comprobar"
-        android:id="@+id/btnComp1"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/white"/>
+        android:layout_weight="0.66">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text=""
-        android:id="@+id/textTest"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/white"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprobar"
+            android:id="@+id/btnComp1"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/textTest"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
 </LinearLayout>

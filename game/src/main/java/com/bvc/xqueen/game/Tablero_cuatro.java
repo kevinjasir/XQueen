@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by RISBO on 10/11/14.
@@ -36,10 +38,11 @@ public class Tablero_cuatro extends Activity {
     CheckBox cc42;
     CheckBox cc43;
     CheckBox cc44;
+    TextView textTest;
 
-    int posibles;
-    //ArrayList lista = new ArrayList();
+
     ArrayList<String> lista = new ArrayList<String>();
+    ArrayList<String[]> lista_reinas = new ArrayList<String[]>();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,63 +68,96 @@ public class Tablero_cuatro extends Activity {
          cc43=(CheckBox)findViewById(R.id.cc43);
          cc44=(CheckBox)findViewById(R.id.cc44);
 
+        textTest=(TextView)findViewById(R.id.textTest);
+
+
 
 
         Button btnComp=(Button)findViewById(R.id.btnComp1);
         btnComp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Antes");
-                System.out.println(lista);
+                //limpiando lista
                 lista.clear();
-                System.out.println("Despues");
-                System.out.println(lista);
 
-                     if(cc11.isChecked()){if(!lista.equals("1,1"))lista.add("1,1");}
-                else if(cc12.isChecked()){if(!lista.equals("1,2"))lista.add("1,2");}
-                else if(cc13.isChecked()){if(!lista.equals("1,3"))lista.add("1,3");}
-                else if(cc14.isChecked()){if(!lista.equals("1,4"))lista.add("1,4");}
 
-                     if(cc21.isChecked()){if(!lista.equals("2,1"))lista.add("2,1");}
-                else if(cc22.isChecked()){if(!lista.equals("2,2"))lista.add("2,2");}
-                else if(cc23.isChecked()){if(!lista.equals("2,3"))lista.add("2,3");}
-                else if(cc24.isChecked()){if(!lista.equals("2,4"))lista.add("2,4");}
+                 if(cc11.isChecked()){if(!lista.equals("1,1"))lista.add("1,1");}
+                 if(cc12.isChecked()){if(!lista.equals("1,2"))lista.add("1,2");}
+                 if(cc13.isChecked()){if(!lista.equals("1,3"))lista.add("1,3");}
 
-                     if(cc31.isChecked()){if(!lista.equals("3,1"))lista.add("3,1");}
-                else if(cc32.isChecked()){if(!lista.equals("3,2"))lista.add("3,2");}
-                else if(cc33.isChecked()){if(!lista.equals("3,3"))lista.add("3,3");}
-                else if(cc34.isChecked()){if(!lista.equals("3,4"))lista.add("3,4");}
+                 if(cc14.isChecked()){if(!lista.equals("1,4"))lista.add("1,4");}
 
-                     if(cc41.isChecked()){if(!lista.equals("4,1"))lista.add("4,1");}
-                else if(cc42.isChecked()){if(!lista.equals("4,2"))lista.add("4,2");}
-                else if(cc43.isChecked()){if(!lista.equals("4,3"))lista.add("4,3");}
-                else if(cc44.isChecked()){if(!lista.equals("4,4"))lista.add("4,4");}
+                 if(cc21.isChecked()){if(!lista.equals("2,1"))lista.add("2,1");}
+                 if(cc22.isChecked()){if(!lista.equals("2,2"))lista.add("2,2");}
+                 if(cc23.isChecked()){if(!lista.equals("2,3"))lista.add("2,3");}
+                 if(cc24.isChecked()){if(!lista.equals("2,4"))lista.add("2,4");}
 
-                System.out.println("final");
-                System.out.println(lista);
+                 if(cc31.isChecked()){if(!lista.equals("3,1"))lista.add("3,1");}
+                 if(cc32.isChecked()){if(!lista.equals("3,2"))lista.add("3,2");}
+                 if(cc33.isChecked()){if(!lista.equals("3,3"))lista.add("3,3");}
+                 if(cc34.isChecked()){if(!lista.equals("3,4"))lista.add("3,4");}
+
+                 if(cc41.isChecked()){if(!lista.equals("4,1"))lista.add("4,1");}
+                 if(cc42.isChecked()){if(!lista.equals("4,2"))lista.add("4,2");}
+                 if(cc43.isChecked()){if(!lista.equals("4,3"))lista.add("4,3");}
+                 if(cc44.isChecked()){if(!lista.equals("4,4"))lista.add("4,4");}
+
+
+
+
+                Reina reinas= new Reina(4);
+                reinas.buscarSoluciones();
+                ArrayList soluciones = reinas.getSoluciones();
+                String [] sol = new  String[4];
+                for (int i = 0; i < soluciones.size();i++){
+                    int[] aux  = (int[]) soluciones.get(i);
+                    for (int j = 0; j<aux.length;j++){
+                        sol[j] = ""+((j+1)+","+(aux[j]+1));
+                        System.out.println("sol "+j+":"+""+((j+1)+","+(aux[j]+1)));
+                    }
+                    System.out.println(i+"-"+Arrays.toString(sol));
+                    lista_reinas.add(i,sol);
+                    lista_reinas.add(sol);
+
+                    //lista_reinas.set(i,sol);
+                }
+                System.out.println("__________________________");
+                System.out.println("lista: "+lista);
+                System.out.println("arr1: "+ Arrays.toString(lista_reinas.get(1)));
+                System.out.println("arr0: "+ Arrays.toString(lista_reinas.get(0)));
+
+                //[1,3, 2,1, 3,4, 4,2]
+
+                boolean ganaste=false;
+                for(int b=0;b<soluciones.size();b++ ){
+                    String listaS = lista.toString();
+                    String lista_rS=Arrays.toString(lista_reinas.get(b));
+                    //System.out.println("listaS: "+listaS);
+                    //System.out.println("lista_rS: "+lista_rS);
+                    if(listaS.equals(lista_rS)){
+                        ganaste=true;
+                        break;
+                    }else{
+                        ganaste=false;
+
+                    }
+                }
+                if(ganaste){textTest.setText("Ganaste");}else{textTest.setText("L");}
+
+                //int[]x=new  int [10];
+                //lista_reinas.set(1,x);
+
+
+
+
 
             }
         });
 
 
 
-        Reina reinas= new Reina(4);
-        reinas.buscarSoluciones();
-        ArrayList soluciones = reinas.getSoluciones();
-
-        System.out.println(soluciones);
-
-        for (int i = 0; i<soluciones.size();i++){
-            int[] aux  = (int[]) soluciones.get(i);
-            System.out.println("Solucion " + (i+1) + ":");
-            for (int j = 0; j<aux.length;j++){
-                System.out.print("(" + (j+1) + "," + (aux[j]+1) + ")");
-            }
-            System.out.println("");
-        }
-
         //Le asignamos colores a los background del checkbox
-        mostrarColores(10,10,10,10);
+        mostrarColores(13,10,13,10);
 
 
         //TextView txt=(TextView)findViewById(R.id.textTest);
@@ -181,7 +217,7 @@ public class Tablero_cuatro extends Activity {
     cc43.setBackgroundResource(R.drawable.rojo);
     cc44.setBackgroundResource(R.drawable.negro);
 
-       cc11.setPadding(izq,arriba,der,abajo);
+       /*cc11.setPadding(izq,arriba,der,abajo);
        cc12.setPadding(izq,arriba,der,abajo);
        cc13.setPadding(izq,arriba,der,abajo);
        cc14.setPadding(izq,arriba,der,abajo);
@@ -201,7 +237,7 @@ public class Tablero_cuatro extends Activity {
        cc41.setPadding(izq,arriba,der,abajo);
        cc42.setPadding(izq,arriba,der,abajo);
        cc43.setPadding(izq,arriba,der,abajo);
-       cc44.setPadding(izq,arriba,der,abajo);
+       cc44.setPadding(izq,arriba,der,abajo);*/
 
     }
 }
