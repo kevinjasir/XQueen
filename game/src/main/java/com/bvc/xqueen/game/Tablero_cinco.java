@@ -5,8 +5,13 @@ package com.bvc.xqueen.game;
  */
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Tablero_cinco extends Activity {
 
@@ -39,6 +44,11 @@ public class Tablero_cinco extends Activity {
     CheckBox c53;
     CheckBox c54;
     CheckBox c55;
+
+    TextView textTest;
+
+    ArrayList<String> lista = new ArrayList<String>();
+    ArrayList<String[]> lista_reinas = new ArrayList<String[]>();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +84,108 @@ public class Tablero_cinco extends Activity {
         c54=(CheckBox)findViewById(R.id.c54);
         c55=(CheckBox)findViewById(R.id.c55);
 
+        textTest=(TextView)findViewById(R.id.textTest5);
+
+
+        Button btnComp=(Button)findViewById(R.id.btnComp5);
+        btnComp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //limpiando lista
+
+                lista.clear();
+                lista_reinas.clear();
+
+
+                if(c11.isChecked()){if(!lista.equals("1,1"))lista.add("1,1");}
+                if(c12.isChecked()){if(!lista.equals("1,2"))lista.add("1,2");}
+                if(c13.isChecked()){if(!lista.equals("1,3"))lista.add("1,3");}
+                if(c14.isChecked()){if(!lista.equals("1,4"))lista.add("1,4");}
+                if(c15.isChecked()){if(!lista.equals("1,5"))lista.add("1,5");}
+
+                if(c21.isChecked()){if(!lista.equals("2,1"))lista.add("2,1");}
+                if(c22.isChecked()){if(!lista.equals("2,2"))lista.add("2,2");}
+                if(c23.isChecked()){if(!lista.equals("2,3"))lista.add("2,3");}
+                if(c24.isChecked()){if(!lista.equals("2,4"))lista.add("2,4");}
+                if(c25.isChecked()){if(!lista.equals("2,5"))lista.add("2,5");}
+
+                if(c31.isChecked()){if(!lista.equals("3,1"))lista.add("3,1");}
+                if(c32.isChecked()){if(!lista.equals("3,2"))lista.add("3,2");}
+                if(c33.isChecked()){if(!lista.equals("3,3"))lista.add("3,3");}
+                if(c34.isChecked()){if(!lista.equals("3,4"))lista.add("3,4");}
+                if(c35.isChecked()){if(!lista.equals("3,5"))lista.add("3,5");}
+
+                if(c41.isChecked()){if(!lista.equals("4,1"))lista.add("4,1");}
+                if(c42.isChecked()){if(!lista.equals("4,2"))lista.add("4,2");}
+                if(c43.isChecked()){if(!lista.equals("4,3"))lista.add("4,3");}
+                if(c44.isChecked()){if(!lista.equals("4,4"))lista.add("4,4");}
+                if(c45.isChecked()){if(!lista.equals("4,5"))lista.add("4,5");}
+
+                if(c51.isChecked()){if(!lista.equals("5,1"))lista.add("5,1");}
+                if(c52.isChecked()){if(!lista.equals("5,2"))lista.add("5,2");}
+                if(c53.isChecked()){if(!lista.equals("5,3"))lista.add("5,3");}
+                if(c54.isChecked()){if(!lista.equals("5,4"))lista.add("5,4");}
+                if(c55.isChecked()){if(!lista.equals("5,5"))lista.add("5,5");}
+
+                //soluciones
+                int N=5;
+                Reina reinas= new Reina(N);
+                reinas.buscarSoluciones();
+                ArrayList soluciones = reinas.getSoluciones();
+
+                for (int i = 0; i < soluciones.size();i++){
+                    int[] aux  = (int[]) soluciones.get(i);
+
+                    String [] sol = new  String[N];
+                    for (int j = 0; j<aux.length;j++){
+                        sol[j] = ""+((j+1)+","+(aux[j]+1));
+                        //System.out.println("sol "+j+":"+""+((j+1)+","+(aux[j]+1)));
+                    }
+                    //System.out.println(i+"-"+Arrays.toString(sol));
+                    //lista_reinas.add(i,sol);
+                    lista_reinas.add(sol);
+
+                }
+                /*
+                System.out.println("======================================");
+                System.out.println("listaLocal: "+lista);
+                for(int i=0;i<soluciones.size();i++)
+                System.out.println("arr"+i+":"+ Arrays.toString(lista_reinas.get(i)));
+                */
+
+                /*
+                //soluciones para pruebas
+                [1,1, 2,3, 3,5, 4,2, 5,4]
+                [1,1, 2,4, 3,2, 4,5, 5,3]
+                [1,2, 2,4, 3,1, 4,3, 5,5]
+                [1,2, 2,5, 3,3, 4,1, 5,4]
+                [1,3, 2,1, 3,4, 4,2, 5,5]
+                [1,3, 2,5, 3,2, 4,4, 5,1]
+                [1,4, 2,1, 3,3, 4,5, 5,2]
+                [1,4, 2,2, 3,5, 4,3, 5,1]
+                [1,5, 2,2, 3,4, 4,1, 5,3]
+                [1,5, 2,3, 3,1, 4,4, 5,2]
+                */
+
+
+                boolean ganaste=false;
+                for(int b=0;b<soluciones.size();b++ ){
+                    String listaS = lista.toString();
+                    String lista_rS= Arrays.toString(lista_reinas.get(b));
+                    if(listaS.equals(lista_rS)){
+                        ganaste=true;
+                        break;
+                    }else{
+                        ganaste=false;
+
+                    }
+                }
+                if(ganaste){textTest.setText("Ganaste");}else{textTest.setText("L");}
+
+            }
+        });
+
+
         //Le asignamos colores a los background del checkbox
         mostrarColores(13,10,13,10);
 
@@ -82,6 +194,8 @@ public class Tablero_cinco extends Activity {
         //txt.setText("hoa llegamos bien");
 
     }
+
+
 
     public void mostrarColores(int izq, int arriba,int der, int abajo){
         c11.setBackgroundResource(R.drawable.negro);

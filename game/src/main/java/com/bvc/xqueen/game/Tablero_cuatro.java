@@ -78,7 +78,9 @@ public class Tablero_cuatro extends Activity {
             @Override
             public void onClick(View view) {
                 //limpiando lista
+
                 lista.clear();
+                lista_reinas.clear();
 
 
                  if(cc11.isChecked()){if(!lista.equals("1,1"))lista.add("1,1");}
@@ -104,36 +106,37 @@ public class Tablero_cuatro extends Activity {
 
 
 
-
+                //soluciones
                 Reina reinas= new Reina(4);
                 reinas.buscarSoluciones();
                 ArrayList soluciones = reinas.getSoluciones();
-                String [] sol = new  String[4];
+
                 for (int i = 0; i < soluciones.size();i++){
                     int[] aux  = (int[]) soluciones.get(i);
+
+                    String [] sol = new  String[4];
                     for (int j = 0; j<aux.length;j++){
                         sol[j] = ""+((j+1)+","+(aux[j]+1));
-                        System.out.println("sol "+j+":"+""+((j+1)+","+(aux[j]+1)));
+                        //System.out.println("sol "+j+":"+""+((j+1)+","+(aux[j]+1)));
                     }
-                    System.out.println(i+"-"+Arrays.toString(sol));
-                    lista_reinas.add(i,sol);
+                    //System.out.println(i+"-"+Arrays.toString(sol));
+                    //lista_reinas.add(i,sol);
                     lista_reinas.add(sol);
 
-                    //lista_reinas.set(i,sol);
                 }
-                System.out.println("__________________________");
-                System.out.println("lista: "+lista);
-                System.out.println("arr1: "+ Arrays.toString(lista_reinas.get(1)));
-                System.out.println("arr0: "+ Arrays.toString(lista_reinas.get(0)));
+//                System.out.println("======================================");
+//                System.out.println("listaLocal: "+lista);
+//                System.out.println("arr1: "+ Arrays.toString(lista_reinas.get(0)));
+//                System.out.println("arr0: "+ Arrays.toString(lista_reinas.get(1)));
 
+                //saluciones para pruebas
                 //[1,3, 2,1, 3,4, 4,2]
+                //[1,2, 2,4, 3,1, 4,3]
 
                 boolean ganaste=false;
                 for(int b=0;b<soluciones.size();b++ ){
                     String listaS = lista.toString();
                     String lista_rS=Arrays.toString(lista_reinas.get(b));
-                    //System.out.println("listaS: "+listaS);
-                    //System.out.println("lista_rS: "+lista_rS);
                     if(listaS.equals(lista_rS)){
                         ganaste=true;
                         break;
@@ -143,13 +146,6 @@ public class Tablero_cuatro extends Activity {
                     }
                 }
                 if(ganaste){textTest.setText("Ganaste");}else{textTest.setText("L");}
-
-                //int[]x=new  int [10];
-                //lista_reinas.set(1,x);
-
-
-
-
 
             }
         });
