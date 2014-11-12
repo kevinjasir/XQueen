@@ -5,8 +5,13 @@ package com.bvc.xqueen.game;
  */
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Tablero_siete extends Activity {
 
@@ -65,6 +70,10 @@ public class Tablero_siete extends Activity {
     CheckBox c75;
     CheckBox c76;
     CheckBox c77;
+
+    TextView textTest;
+    ArrayList<String> lista = new ArrayList<String>();
+    ArrayList<String[]> lista_reinas = new ArrayList<String[]>();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,6 +135,161 @@ public class Tablero_siete extends Activity {
         c76=(CheckBox)findViewById(R.id.c76);
         c77=(CheckBox)findViewById(R.id.c77);
         //Le asignamos colores a los background del checkbox
+
+        textTest=(TextView)findViewById(R.id.textTest);
+
+        Button btnComp=(Button)findViewById(R.id.btnComp7);
+        btnComp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //limpiando lista
+
+                lista.clear();
+                lista_reinas.clear();
+
+
+                if(c11.isChecked()){if(!lista.equals("1,1"))lista.add("1,1");}
+                if(c12.isChecked()){if(!lista.equals("1,2"))lista.add("1,2");}
+                if(c13.isChecked()){if(!lista.equals("1,3"))lista.add("1,3");}
+                if(c14.isChecked()){if(!lista.equals("1,4"))lista.add("1,4");}
+                if(c15.isChecked()){if(!lista.equals("1,5"))lista.add("1,5");}
+                if(c16.isChecked()){if(!lista.equals("1,6"))lista.add("1,6");}
+                if(c17.isChecked()){if(!lista.equals("1,7"))lista.add("1,7");}
+
+                if(c21.isChecked()){if(!lista.equals("2,1"))lista.add("2,1");}
+                if(c22.isChecked()){if(!lista.equals("2,2"))lista.add("2,2");}
+                if(c23.isChecked()){if(!lista.equals("2,3"))lista.add("2,3");}
+                if(c24.isChecked()){if(!lista.equals("2,4"))lista.add("2,4");}
+                if(c25.isChecked()){if(!lista.equals("2,5"))lista.add("2,5");}
+                if(c26.isChecked()){if(!lista.equals("2,6"))lista.add("2,6");}
+                if(c27.isChecked()){if(!lista.equals("2,7"))lista.add("2,7");}
+
+                if(c31.isChecked()){if(!lista.equals("3,1"))lista.add("3,1");}
+                if(c32.isChecked()){if(!lista.equals("3,2"))lista.add("3,2");}
+                if(c33.isChecked()){if(!lista.equals("3,3"))lista.add("3,3");}
+                if(c34.isChecked()){if(!lista.equals("3,4"))lista.add("3,4");}
+                if(c35.isChecked()){if(!lista.equals("3,5"))lista.add("3,5");}
+                if(c36.isChecked()){if(!lista.equals("3,6"))lista.add("3,6");}
+                if(c37.isChecked()){if(!lista.equals("3,7"))lista.add("3,7");}
+
+                if(c41.isChecked()){if(!lista.equals("4,1"))lista.add("4,1");}
+                if(c42.isChecked()){if(!lista.equals("4,2"))lista.add("4,2");}
+                if(c43.isChecked()){if(!lista.equals("4,3"))lista.add("4,3");}
+                if(c44.isChecked()){if(!lista.equals("4,4"))lista.add("4,4");}
+                if(c45.isChecked()){if(!lista.equals("4,5"))lista.add("4,5");}
+                if(c46.isChecked()){if(!lista.equals("4,6"))lista.add("4,6");}
+                if(c47.isChecked()){if(!lista.equals("4,7"))lista.add("4,7");}
+
+                if(c51.isChecked()){if(!lista.equals("5,1"))lista.add("5,1");}
+                if(c52.isChecked()){if(!lista.equals("5,2"))lista.add("5,2");}
+                if(c53.isChecked()){if(!lista.equals("5,3"))lista.add("5,3");}
+                if(c54.isChecked()){if(!lista.equals("5,4"))lista.add("5,4");}
+                if(c55.isChecked()){if(!lista.equals("5,5"))lista.add("5,5");}
+                if(c56.isChecked()){if(!lista.equals("5,6"))lista.add("5,6");}
+                if(c57.isChecked()){if(!lista.equals("5,7"))lista.add("5,7");}
+
+                if(c61.isChecked()){if(!lista.equals("6,1"))lista.add("6,1");}
+                if(c62.isChecked()){if(!lista.equals("6,2"))lista.add("6,2");}
+                if(c63.isChecked()){if(!lista.equals("6,3"))lista.add("6,3");}
+                if(c64.isChecked()){if(!lista.equals("6,4"))lista.add("6,4");}
+                if(c65.isChecked()){if(!lista.equals("6,5"))lista.add("6,5");}
+                if(c66.isChecked()){if(!lista.equals("6,6"))lista.add("6,6");}
+                if(c67.isChecked()){if(!lista.equals("6,7"))lista.add("6,7");}
+
+                if(c71.isChecked()){if(!lista.equals("7,1"))lista.add("7,1");}
+                if(c72.isChecked()){if(!lista.equals("7,2"))lista.add("7,2");}
+                if(c73.isChecked()){if(!lista.equals("7,3"))lista.add("7,3");}
+                if(c74.isChecked()){if(!lista.equals("7,4"))lista.add("7,4");}
+                if(c75.isChecked()){if(!lista.equals("7,5"))lista.add("7,5");}
+                if(c76.isChecked()){if(!lista.equals("7,6"))lista.add("7,6");}
+                if(c77.isChecked()){if(!lista.equals("7,7"))lista.add("7,7");}
+
+                //soluciones
+                int N=7;
+                Reina reinas= new Reina(N);
+                reinas.buscarSoluciones();
+                ArrayList soluciones = reinas.getSoluciones();
+
+                for (int i = 0; i < soluciones.size();i++){
+                    int[] aux  = (int[]) soluciones.get(i);
+
+                    String [] sol = new  String[N];
+                    for (int j = 0; j<aux.length;j++){
+                        sol[j] = ""+((j+1)+","+(aux[j]+1));
+                        //System.out.println("sol "+j+":"+""+((j+1)+","+(aux[j]+1)));
+                    }
+                    //System.out.println(i+"-"+Arrays.toString(sol));
+                    //lista_reinas.add(i,sol);
+                    lista_reinas.add(sol);
+
+                }
+                
+                System.out.println("======================================");
+                System.out.println("listaLocal: "+lista);
+                for(int i=0;i<soluciones.size();i++)
+                System.out.println("arr"+i+":"+ Arrays.toString(lista_reinas.get(i)));
+                /*
+                //soluciones para pruebas
+                [1,1, 2,3, 3,5, 4,7, 5,2, 6,4, 7,6]
+                [1,1, 2,4, 3,7, 4,3, 5,6, 6,2, 7,5]
+                [1,1, 2,5, 3,2, 4,6, 5,3, 6,7, 7,4]
+                [1,1, 2,6, 3,4, 4,2, 5,7, 6,5, 7,3]
+                [1,2, 2,4, 3,1, 4,7, 5,5, 6,3, 7,6]
+                [1,2, 2,4, 3,6, 4,1, 5,3, 6,5, 7,7]
+                [1,2, 2,5, 3,1, 4,4, 5,7, 6,3, 7,6]
+                [1,2, 2,5, 3,3, 4,1, 5,7, 6,4, 7,6]
+                [1,2, 2,5, 3,7, 4,4, 5,1, 6,3, 7,6]
+                [1,2, 2,6, 3,3, 4,7, 5,4, 6,1, 7,5]
+                [1,2, 2,7, 3,5, 4,3, 5,1, 6,6, 7,4]
+                [1,3, 2,1, 3,6, 4,2, 5,5, 6,7, 7,4]
+                [1,3, 2,1, 3,6, 4,4, 5,2, 6,7, 7,5]
+                [1,3, 2,5, 3,7, 4,2, 5,4, 6,6, 7,1]
+                [1,3, 2,6, 3,2, 4,5, 5,1, 6,4, 7,7]
+                [1,3, 2,7, 3,2, 4,4, 5,6, 6,1, 7,5]
+                [1,3, 2,7, 3,4, 4,1, 5,5, 6,2, 7,6]
+                [1,4, 2,1, 3,3, 4,6, 5,2, 6,7, 7,5]
+                [1,4, 2,1, 3,5, 4,2, 5,6, 6,3, 7,7]
+                [1,4, 2,2, 3,7, 4,5, 5,3, 6,1, 7,6]
+                [1,4, 2,6, 3,1, 4,3, 5,5, 6,7, 7,2]
+                [1,4, 2,7, 3,3, 4,6, 5,2, 6,5, 7,1]
+                [1,4, 2,7, 3,5, 4,2, 5,6, 6,1, 7,3]
+                [1,5, 2,1, 3,4, 4,7, 5,3, 6,6, 7,2]
+                [1,5, 2,1, 3,6, 4,4, 5,2, 6,7, 7,3]
+                [1,5, 2,2, 3,6, 4,3, 5,7, 6,4, 7,1]
+                [1,5, 2,3, 3,1, 4,6, 5,4, 6,2, 7,7]
+                [1,5, 2,7, 3,2, 4,4, 5,6, 6,1, 7,3]
+                [1,5, 2,7, 3,2, 4,6, 5,3, 6,1, 7,4]
+                [1,6, 2,1, 3,3, 4,5, 5,7, 6,2, 7,4]
+                [1,6, 2,2, 3,5, 4,1, 5,4, 6,7, 7,3]
+                [1,6, 2,3, 3,1, 4,4, 5,7, 6,5, 7,2]
+                [1,6, 2,3, 3,5, 4,7, 5,1, 6,4, 7,2]
+                [1,6, 2,3, 3,7, 4,4, 5,1, 6,5, 7,2]
+                [1,6, 2,4, 3,2, 4,7, 5,5, 6,3, 7,1]
+                [1,6, 2,4, 3,7, 4,1, 5,3, 6,5, 7,2]
+                [1,7, 2,2, 3,4, 4,6, 5,1, 6,3, 7,5]
+                [1,7, 2,3, 3,6, 4,2, 5,5, 6,1, 7,4]
+                [1,7, 2,4, 3,1, 4,5, 5,2, 6,6, 7,3]
+                [1,7, 2,5, 3,3, 4,1, 5,6, 6,4, 7,2]
+                */
+
+                boolean ganaste=false;
+                for(int b=0;b<soluciones.size();b++ ){
+                    String listaS = lista.toString();
+                    String lista_rS= Arrays.toString(lista_reinas.get(b));
+                    if(listaS.equals(lista_rS)){
+                        ganaste=true;
+                        break;
+                    }else{
+                        ganaste=false;
+
+                    }
+                }
+                if(ganaste){textTest.setText("Ganaste");}else{textTest.setText("L");}
+
+            }
+        });
+
+
         mostrarColores();
 
 

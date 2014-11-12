@@ -153,45 +153,10 @@ public class Tablero_cuatro extends Activity {
 
 
         //Le asignamos colores a los background del checkbox
-        mostrarColores(13,10,13,10);
-
-
-        //TextView txt=(TextView)findViewById(R.id.textTest);
-        //txt.setText("hoa llegamos bien");
+        mostrarColores(15,12,15,12);
 
     }
-    /**  movimientos de la pantalla
-     * para despues tratar de contar los movimientos
-    public static final String DEBUG_TAG = "GesturesActivity";
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        // TODO Auto-generated method stub
 
-        int action = MotionEventCompat.getActionMasked(event);
-
-        switch (action) {
-            case (MotionEvent.ACTION_DOWN):
-                Log.d(DEBUG_TAG, "La accion ha sido ABAJO");
-                return true;
-            case (MotionEvent.ACTION_MOVE):
-                Log.d(DEBUG_TAG, "La acción ha sido MOVER");
-                return true;
-            case (MotionEvent.ACTION_UP):
-                Log.d(DEBUG_TAG, "La acción ha sido ARRIBA");
-
-                return true;
-            case (MotionEvent.ACTION_CANCEL):
-                Log.d(DEBUG_TAG, "La accion ha sido CANCEL");
-                return true;
-            case (MotionEvent.ACTION_OUTSIDE):
-                Log.d(DEBUG_TAG,
-                        "La accion ha sido fuera del elemento de la pantalla");
-                return true;
-            default:
-                return super.onTouchEvent(event);
-        }
-    }
-**/
     public void mostrarColores(int izq, int arriba,int der, int abajo){
     cc11.setBackgroundResource(R.drawable.negro);
     cc12.setBackgroundResource(R.drawable.rojo);
@@ -213,7 +178,7 @@ public class Tablero_cuatro extends Activity {
     cc43.setBackgroundResource(R.drawable.rojo);
     cc44.setBackgroundResource(R.drawable.negro);
 
-       /*cc11.setPadding(izq,arriba,der,abajo);
+       cc11.setPadding(izq,arriba,der,abajo);
        cc12.setPadding(izq,arriba,der,abajo);
        cc13.setPadding(izq,arriba,der,abajo);
        cc14.setPadding(izq,arriba,der,abajo);
@@ -233,7 +198,7 @@ public class Tablero_cuatro extends Activity {
        cc41.setPadding(izq,arriba,der,abajo);
        cc42.setPadding(izq,arriba,der,abajo);
        cc43.setPadding(izq,arriba,der,abajo);
-       cc44.setPadding(izq,arriba,der,abajo);*/
+       cc44.setPadding(izq,arriba,der,abajo);
 
     }
 }
