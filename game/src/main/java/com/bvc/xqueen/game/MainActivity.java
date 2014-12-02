@@ -19,6 +19,7 @@ public class MainActivity extends ActionBarActivity {
     RadioButton rb8;
 
     Button btnComenzar;
+    Button btnAyuda;
     TextView textInicio;
 
     @Override
@@ -28,6 +29,8 @@ public class MainActivity extends ActionBarActivity {
 
         btnComenzar=(Button)findViewById(R.id.btnComenzar);
 
+        btnAyuda=(Button)findViewById(R.id.btnAyuda);
+
         textInicio=(TextView)findViewById(R.id.textInicio);
 
         rb4=(RadioButton)findViewById(R.id.radioB4);
@@ -35,6 +38,14 @@ public class MainActivity extends ActionBarActivity {
         rb7=(RadioButton)findViewById(R.id.radioB7);
         rb8=(RadioButton)findViewById(R.id.radioB8);
 
+        btnAyuda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textInicio.setText("Ingesando a Ayuda");
+                Intent intent = new Intent("com.bvc.xqueen.game.MOSTRAR");
+                startActivity(intent);
+            }
+        });
         btnComenzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
