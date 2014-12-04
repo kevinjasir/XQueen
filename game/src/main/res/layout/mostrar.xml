@@ -10,22 +10,7 @@
         android:orientation="vertical"
         android:layout_gravity="center_vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AYUDA"
-        android:id="@+id/textAyuda"
-        android:padding="4dp"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Elegir ablero para mostrar soluciones"
-        android:id="@+id/textMensaje"
-        android:layout_gravity="center_horizontal" />
-
-    <RadioGroup
+        <!--<RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
@@ -53,14 +38,67 @@
             android:layout_height="wrap_content"
             android:text="Tablero 8x8, Muy Dificil"
             android:id="@+id/radioTablero8" />
-    </RadioGroup>
+    </RadioGroup>-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver ejemplos"
+            android:id="@+id/btnIr"
+            android:layout_gravity="center_horizontal" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ir"
-        android:id="@+id/btnIr"
-        android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AYUDA"
+            android:id="@+id/textAyuda"
+            android:padding="4dp"
+            android:layout_gravity="center_horizontal" />
+
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="El problema de las ocho reinas es un pasatiempo en el que se colocan ocho reinas sin que se amenacen. En el juego del ajedrez la reina amenaza a aquellas piezas que se encuentren en su misma fila, columna o diagonal. Ver imagen de acontinuación:"
+                android:id="@+id/textMensaje"
+                android:layout_gravity="center_horizontal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ataque"
+                    android:padding="40px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" El juego de las 8 reinas consiste en colocar sobre un tablero de ajedrez ocho reinas sin que estas se amenacen entre ellas, como se muestra en la siguiente imagen:"
+                    android:id="@+id/textMensaje2"
+                    android:layout_gravity="center_horizontal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="320px"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/tablero8"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+        </ScrollView>
+
     </LinearLayout>
 
 </LinearLayout>

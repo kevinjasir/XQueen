@@ -194,7 +194,9 @@ public class Tablero_cinco extends Activity {
 
                 }
                 else{
-                    textTest.setText("L");
+                    textTest.setText("Perdiste");
+                    titulo1.setText("Intentalo denuevo");
+
                     limpiarCheckbox5x5();
                 }
 

@@ -74,6 +74,17 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".Mostrar_ayuda"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.bvc.xqueen.game.MOSTRAR_AYUDA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

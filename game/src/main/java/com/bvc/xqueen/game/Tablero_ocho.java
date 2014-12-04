@@ -393,7 +393,9 @@ public class Tablero_ocho extends Activity {
 
                 }
                 else{
-                    textTest.setText("L");
+                    textTest.setText("Perdiste!!");
+                    titulo1.setText("Intentalo de nuevo");
+
                     limpiarCheckbox8x8();
                 }
 

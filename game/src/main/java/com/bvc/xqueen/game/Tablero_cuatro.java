@@ -157,7 +157,8 @@ public class Tablero_cuatro extends Activity {
 
                 }
                 else{
-                    textTest.setText("L");
+                    textTest.setText("Perdiste");
+                    titulo1.setText("Intentalo de nuevo");
                     limpiarCheckbox4x4();
                 }
 

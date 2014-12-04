@@ -297,7 +297,8 @@ public class Tablero_siete extends Activity {
                     //hacer una alerta para ver si quiere seguir jugando o pasar al otro nivel
                 }
                 else{
-                    textTest.setText("L");
+                    textTest.setText("Perdiste");
+                    titulo1.setText("Intentalo de nuevo");
                     limpiarCheckbox7x7();
                 }
             }
