@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoayuda2">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="8 Reinas"
-        android:id="@+id/textView1"
+        android:text="Ejemplos"
+        android:id="@+id/textView"
+        android:textColor="@android:color/white"
         android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/white"/>
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Seleccione Ejemplo de Solución para Mostrar"
+        android:id="@+id/textView"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16dp"
+        android:textAlignment="center" />
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spReinas"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Seleccione 8 posiciones en el tablero."
-        android:id="@+id/textView2"
         android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/white"/>
+        android:padding="10px" />
 
 
     <TableLayout
@@ -425,20 +431,4 @@
 
     </TableLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Comprobar"
-        android:id="@+id/btnComp8"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/white"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text=""
-        android:id="@+id/textTest8"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/white"/>
 </LinearLayout>

@@ -73,6 +73,7 @@
         android:text="Mostrar Ayuda"
         android:id="@+id/btnAyuda"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textInicio" />
+        android:layout_alignRight="@+id/textInicio"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

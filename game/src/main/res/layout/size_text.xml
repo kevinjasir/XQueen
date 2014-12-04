@@ -3,7 +3,8 @@
     android:layout_width="fill_parent" 
     android:layout_height="wrap_content" 
     android:textSize="16px" 
-    android:singleLine="True" 
+    android:singleLine="true"
     android:id="@+id/spinnerTarget" 
-    android:textColor="#000000"
-    android:padding="12px"/>
+    android:textColor="#ffffff"
+    android:background="#2E2E2E"
+    android:padding="10px"/>

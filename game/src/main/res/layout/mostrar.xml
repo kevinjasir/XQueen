@@ -2,7 +2,8 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoayuda2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +45,8 @@
             android:layout_height="wrap_content"
             android:text="Ver ejemplos"
             android:id="@+id/btnIr"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white" />
 
 
         <TextView
@@ -53,7 +55,8 @@
             android:text="AYUDA"
             android:id="@+id/textAyuda"
             android:padding="4dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white" />
 
 
 
@@ -72,7 +75,8 @@
                 android:layout_height="wrap_content"
                 android:text="El problema de las ocho reinas es un pasatiempo en el que se colocan ocho reinas sin que se amenacen. En el juego del ajedrez la reina amenaza a aquellas piezas que se encuentren en su misma fila, columna o diagonal. Ver imagen de acontinuación:"
                 android:id="@+id/textMensaje"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/white" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -87,7 +91,8 @@
                     android:layout_height="wrap_content"
                     android:text=" El juego de las 8 reinas consiste en colocar sobre un tablero de ajedrez ocho reinas sin que estas se amenacen entre ellas, como se muestra en la siguiente imagen:"
                     android:id="@+id/textMensaje2"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/white" />
 
                 <ImageView
                     android:layout_width="wrap_content"

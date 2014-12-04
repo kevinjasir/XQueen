@@ -202,6 +202,8 @@ public class Mostrar_ayuda extends Activity {
         } //System.out.println(Arrays.toString(array));
 
 
+        mostrarColores();
+
         spSoluciones= (Spinner)findViewById(R.id.spReinas);
 
         spSoluciones.setAdapter(new ArrayAdapter(this,R.layout.size_text,array));
@@ -217,16 +219,15 @@ public class Mostrar_ayuda extends Activity {
                 limpiarCheckbox();
                 bloquearCheckbox();
 
-
-
-              String cadena=Arrays.toString(lista_reinas.get(arg2));
+                //obteniendo valor seleccionado
+                String cadena=Arrays.toString(lista_reinas.get(arg2));
                 //reparando salida
                 String[]cadenasp = cadena.split(", ");
                 int x =cadenasp.length;
                 for(int i = 0; i < x; i++){
                     if(i==0){cadenasp[i]=cadenasp[i].substring(1);}
                     if(i==(x-1)){cadenasp[i]=cadenasp[i].substring(0,3);}
-                    System.out.println("-->"+cadenasp[i]+"<--");
+                    //System.out.println("-->"+cadenasp[i]+"<--");
 
                     //limpiando checkbox, por si hubiese uno seleccionado;
 
@@ -392,7 +393,79 @@ public class Mostrar_ayuda extends Activity {
         c87.setEnabled(false);
         c88.setEnabled(false);
     }
+    public void mostrarColores(){
+        c11.setBackgroundResource(R.drawable.negro);
+        c12.setBackgroundResource(R.drawable.rojo);
+        c13.setBackgroundResource(R.drawable.negro);
+        c14.setBackgroundResource(R.drawable.rojo);
+        c15.setBackgroundResource(R.drawable.negro);
+        c16.setBackgroundResource(R.drawable.rojo);
+        c17.setBackgroundResource(R.drawable.negro);
+        c18.setBackgroundResource(R.drawable.rojo);
 
+        c21.setBackgroundResource(R.drawable.rojo);
+        c22.setBackgroundResource(R.drawable.negro);
+        c23.setBackgroundResource(R.drawable.rojo);
+        c24.setBackgroundResource(R.drawable.negro);
+        c25.setBackgroundResource(R.drawable.rojo);
+        c26.setBackgroundResource(R.drawable.negro);
+        c27.setBackgroundResource(R.drawable.rojo);
+        c28.setBackgroundResource(R.drawable.negro);
+
+        c31.setBackgroundResource(R.drawable.negro);
+        c32.setBackgroundResource(R.drawable.rojo);
+        c33.setBackgroundResource(R.drawable.negro);
+        c34.setBackgroundResource(R.drawable.rojo);
+        c35.setBackgroundResource(R.drawable.negro);
+        c36.setBackgroundResource(R.drawable.rojo);
+        c37.setBackgroundResource(R.drawable.negro);
+        c38.setBackgroundResource(R.drawable.rojo);
+
+        c41.setBackgroundResource(R.drawable.rojo);
+        c42.setBackgroundResource(R.drawable.negro);
+        c43.setBackgroundResource(R.drawable.rojo);
+        c44.setBackgroundResource(R.drawable.negro);
+        c45.setBackgroundResource(R.drawable.rojo);
+        c46.setBackgroundResource(R.drawable.negro);
+        c47.setBackgroundResource(R.drawable.rojo);
+        c48.setBackgroundResource(R.drawable.negro);
+
+        c51.setBackgroundResource(R.drawable.negro);
+        c52.setBackgroundResource(R.drawable.rojo);
+        c53.setBackgroundResource(R.drawable.negro);
+        c54.setBackgroundResource(R.drawable.rojo);
+        c55.setBackgroundResource(R.drawable.negro);
+        c56.setBackgroundResource(R.drawable.rojo);
+        c57.setBackgroundResource(R.drawable.negro);
+        c58.setBackgroundResource(R.drawable.rojo);
+
+        c61.setBackgroundResource(R.drawable.rojo);
+        c62.setBackgroundResource(R.drawable.negro);
+        c63.setBackgroundResource(R.drawable.rojo);
+        c64.setBackgroundResource(R.drawable.negro);
+        c65.setBackgroundResource(R.drawable.rojo);
+        c66.setBackgroundResource(R.drawable.negro);
+        c67.setBackgroundResource(R.drawable.rojo);
+        c68.setBackgroundResource(R.drawable.negro);
+
+        c71.setBackgroundResource(R.drawable.negro);
+        c72.setBackgroundResource(R.drawable.rojo);
+        c73.setBackgroundResource(R.drawable.negro);
+        c74.setBackgroundResource(R.drawable.rojo);
+        c75.setBackgroundResource(R.drawable.negro);
+        c76.setBackgroundResource(R.drawable.rojo);
+        c77.setBackgroundResource(R.drawable.negro);
+        c78.setBackgroundResource(R.drawable.rojo);
+
+        c81.setBackgroundResource(R.drawable.rojo);
+        c82.setBackgroundResource(R.drawable.negro);
+        c83.setBackgroundResource(R.drawable.rojo);
+        c84.setBackgroundResource(R.drawable.negro);
+        c85.setBackgroundResource(R.drawable.rojo);
+        c86.setBackgroundResource(R.drawable.negro);
+        c87.setBackgroundResource(R.drawable.rojo);
+        c88.setBackgroundResource(R.drawable.negro);
+    }
     private void limpiarCheckbox(){
         c11.setChecked(false);
         c12.setChecked(false);
